@@ -1,0 +1,57 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.mainContainer {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  --s: 243px; /* control the size*/
+  --c1: #1a1a1a;
+  --c2: #101010;
+  --c3: #171717;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+.button {
+  background-color: #403e3e;
+  border-radius: 7px;
+  padding: 9px 14px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.button:hover {
+  box-shadow: 0px 1px 6px #fff;
+}

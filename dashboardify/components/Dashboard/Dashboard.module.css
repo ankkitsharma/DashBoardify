@@ -1,0 +1,12 @@
+.dashboard {
+  height: 250px;
+  width: 450px;
+}
+
+.card {
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(32, 32, 32, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
