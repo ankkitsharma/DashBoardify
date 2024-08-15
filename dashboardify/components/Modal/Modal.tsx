@@ -1,8 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "./Modal.module.css";
 import ReactModal from "react-modal";
 import { IoMdClose } from "react-icons/io";
+import { useAppDispatch } from "@/lib/hooks";
+import { addWidget } from "@/lib/features/widget/widgetSlice";
+import { widgetState } from "@/lib/features/widget/widgetSlice";
 
 const customStyles = {
   content: {
@@ -18,6 +21,7 @@ const customStyles = {
 };
 
 export default function Modal() {
+  const dispatch = useAppDispatch();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -26,6 +30,18 @@ export default function Modal() {
 
   const handleClose = () => {
     setIsOpen(false);
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const values: widgetState = {
+      widgetName: formData.get("widgetName")?.toString() || "",
+      dashboardName: formData.get("dashboardName")?.toString() || "",
+      widgetData: Object(formData.get("jsonData")),
+    };
+    dispatch(addWidget(values));
   };
 
   return (
@@ -43,7 +59,7 @@ export default function Modal() {
           <button onClick={handleClose} className={`button ${styles.closeBtn}`}>
             <IoMdClose />
           </button>
-          <form className={styles.widgetForm}>
+          <form className={styles.widgetForm} onSubmit={handleSubmit}>
             <div className={styles.formHeading}>Add Widget data</div>
             <div className={styles.formDiv}>
               <label htmlFor="widgetName">Write widget's name:</label>
