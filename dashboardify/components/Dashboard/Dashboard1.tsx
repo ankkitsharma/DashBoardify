@@ -2,9 +2,12 @@
 import React, { PureComponent } from "react";
 import styles from "./Dashboard.module.css";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
-import data from "@/JsonData/Dashboard1/data1.json";
+import { widgetState } from "@/lib/features/widget/widgetSlice";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+interface Dashboard1Props {
+  data: widgetState; // or some other type that makes sense for your component
+}
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -33,13 +36,13 @@ const renderCustomizedLabel = ({
   );
 };
 
-export default function Dashboard() {
+export default function Dashboard({ data }: Dashboard1Props) {
   return (
     <div className={styles.dashboard + " " + styles.card}>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
           <Pie
-            data={data}
+            data={data.widgetData}
             cx="50%"
             cy="50%"
             labelLine={false}
@@ -48,7 +51,7 @@ export default function Dashboard() {
             fill="#8884d8"
             dataKey="value"
           >
-            {data.map((entry, index) => (
+            {data.widgetData.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}

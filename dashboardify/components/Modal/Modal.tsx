@@ -23,6 +23,8 @@ const customStyles = {
 export default function Modal() {
   const dispatch = useAppDispatch();
   const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState([]);
+  const [file, setFile] = useState(null);
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -35,13 +37,25 @@ export default function Modal() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
+    console.log(form);
     const formData = new FormData(form);
-    const values: widgetState = {
-      widgetName: formData.get("widgetName")?.toString() || "",
-      dashboardName: formData.get("dashboardName")?.toString() || "",
-      widgetData: Object(formData.get("jsonData")),
+    const file = Object(formData.get("jsonData"));
+    setFile(file);
+    const reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = () => {
+      if (reader.result !== null) {
+        const jsonData = JSON.parse(reader.result as string);
+        const values: widgetState = {
+          widgetName: formData.get("widgetName")?.toString() || "",
+          dashboardName: formData.get("dashboardName")?.toString() || "",
+          widgetData: jsonData,
+        };
+        dispatch(addWidget(values));
+      } else {
+        console.error("Failed to read file");
+      }
     };
-    dispatch(addWidget(values));
   };
 
   return (

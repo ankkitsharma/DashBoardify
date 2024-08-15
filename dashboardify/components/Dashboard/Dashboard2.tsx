@@ -10,13 +10,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import styles from "./Dashboard.module.css";
-import data from "@/JsonData/Dashboard2/data1.json";
+import { widgetState } from "@/lib/features/widget/widgetSlice";
 
-export default function Dashboard() {
+interface Dashboard1Props {
+  data: widgetState; // or some other type that makes sense for your component
+}
+
+export default function Dashboard({ data }: Dashboard1Props) {
   return (
     <div className={styles.dashboard + " " + styles.card}>
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data.widgetData}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis angle={30} domain={[0, 150]} />

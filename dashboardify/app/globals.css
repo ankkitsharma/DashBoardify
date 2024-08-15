@@ -1,19 +1,8 @@
 body {
-  background-color: black;
+  /* background-color: black; */
   color: white;
   margin: 0;
   height: 100vh;
-}
-
-a {
-  text-decoration: unset;
-  color: unset;
-}
-
-.mainContainer {
-  padding-left: 5%;
-  padding-right: 5%;
-
   --s: 243px; /* control the size*/
   --c1: #1a1a1a;
   --c2: #101010;
@@ -32,6 +21,16 @@ a {
       var(--c3) 0 180deg
     );
   background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.mainContainer {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .button {

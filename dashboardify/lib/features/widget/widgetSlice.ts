@@ -4,14 +4,14 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface widgetState {
   widgetName: String;
   dashboardName: String;
-  widgetData: Object;
+  widgetData: Array<Object>;
 }
 
 const initialState: widgetState[] = [
   {
     widgetName: "",
     dashboardName: "",
-    widgetData: {},
+    widgetData: [],
   },
 ];
 
