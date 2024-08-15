@@ -1,0 +1,41 @@
+.formHeading {
+  font-size: 1.5rem;
+}
+
+.widgetForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.widgetFormContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload {
+  text-align: center;
+}
+
+.modalContent {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

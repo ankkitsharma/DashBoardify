@@ -1,9 +1,10 @@
 import React from "react";
+import Modal from "@/components/Modal/Modal";
 
 export default function () {
   return (
     <div>
-      <button className="button">Add widget +</button>
+      <Modal />
     </div>
   );
 }
