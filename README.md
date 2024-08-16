@@ -6,6 +6,12 @@ A customizable dashboard built with Next.js and React.
 
 Dashboardify is a highly customizable dashboard application built with Next.js and React. It features a modular design, allowing you to easily add or remove widgets and components to suit your needs.
 
+# Website Link
+https://dash-boardify.vercel.app/
+
+# Github Link
+https://github.com/ankkitsharma/DashBoardify/
+
 # Features
 
 - Modular design with customizable widgets and components
