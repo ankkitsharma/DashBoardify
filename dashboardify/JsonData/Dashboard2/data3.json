@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Music",
+    "A": 100,
+    "B": 90,
+    "fullMark": 150
+  },
+  {
+    "subject": "Art",
+    "A": 85,
+    "B": 105,
+    "fullMark": 150
+  },
+  {
+    "subject": "Physical Education",
+    "A": 95,
+    "B": 90,
+    "fullMark": 150
+  },
+  {
+    "subject": "Business",
+    "A": 80,
+    "B": 100,
+    "fullMark": 150
+  },
+  {
+    "subject": "German",
+    "A": 90,
+    "B": 100,
+    "fullMark": 150
+  },
+  {
+    "subject": "Political Science",
+    "A": 75,
+    "B": 95,
+    "fullMark": 150
+  }
+]

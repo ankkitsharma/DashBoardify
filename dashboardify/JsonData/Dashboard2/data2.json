@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Biology",
+    "A": 105,
+    "B": 120,
+    "fullMark": 150
+  },
+  {
+    "subject": "Chemistry",
+    "A": 90,
+    "B": 110,
+    "fullMark": 150
+  },
+  {
+    "subject": "Computer Science",
+    "A": 130,
+    "B": 140,
+    "fullMark": 150
+  },
+  {
+    "subject": "Economics",
+    "A": 80,
+    "B": 100,
+    "fullMark": 150
+  },
+  {
+    "subject": "French",
+    "A": 95,
+    "B": 115,
+    "fullMark": 150
+  },
+  {
+    "subject": "Spanish",
+    "A": 70,
+    "B": 90,
+    "fullMark": 150
+  }
+]

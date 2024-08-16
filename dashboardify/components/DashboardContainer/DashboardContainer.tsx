@@ -65,9 +65,6 @@ export default function DashboardContainer() {
     }
   }, [widget, search]);
 
-  console.log("dash1 ", dash1);
-  console.log("dash2 ", dash2);
-
   return (
     <div className="pt-3">
       <div className={"pt-2"}>Dashboard1</div>

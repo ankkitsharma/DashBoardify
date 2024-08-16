@@ -24,7 +24,10 @@ export default function Navbar() {
             name="search"
           />
         </form>
-        <Link href={"https://github.com/ankkitsharma"} target="_blank">
+        <Link
+          href={"https://github.com/ankkitsharma/DashBoardify"}
+          target="_blank"
+        >
           {" "}
           <FaGithub className={styles.source} />
         </Link>

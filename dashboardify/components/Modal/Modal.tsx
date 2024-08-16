@@ -38,7 +38,6 @@ export default function Modal() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
-    console.log(form);
     const formData = new FormData(form);
     const file = Object(formData.get("jsonData"));
     setFile(file);
