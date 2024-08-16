@@ -7,8 +7,12 @@ import { useAppSelector } from "@/lib/hooks";
 import { widgetState1 } from "@/lib/features/widget/widgetSlice";
 import jsondata from "@/JsonData/Dashboard1/data1.json";
 import { uuid } from "uuidv4";
+import { useSearchParams } from "next/navigation";
 
 export default function DashboardContainer() {
+  const searchParams = useSearchParams();
+
+  const search = searchParams.get("search");
   const widget = useAppSelector((state) => state.values);
   const [dash1, setDash1] = useState<widgetState1["values"]>([
     {
@@ -29,19 +33,37 @@ export default function DashboardContainer() {
 
   useEffect(() => {
     if (Array.isArray(widget)) {
-      const dash_1: any = widget.filter((item) => {
-        return item.dashboardName === "Dashboard1";
-      });
-      setDash1(dash_1);
-      const dash_2: any = widget.filter((item) => {
-        return item.dashboardName === "Dashboard2";
-      });
-      setDash2(dash_2);
-      console.log("dash_1 ", dash_1);
-      console.log("dash_2 ", dash_2);
-      console.log("jsondata ", jsondata);
+      if (search) {
+        const widgetName = search; // Get the widget name from the query parameter
+        const dash_1 = widget.filter((item) => {
+          return (
+            item.dashboardName === "Dashboard1" &&
+            item.widgetName.includes(widgetName)
+          );
+        });
+        setDash1(dash_1);
+        const dash_2 = widget.filter((item) => {
+          return (
+            item.dashboardName === "Dashboard2" &&
+            item.widgetName.includes(widgetName)
+          );
+        });
+        setDash2(dash_2);
+      } else {
+        const dash_1: any = widget.filter((item) => {
+          return item.dashboardName === "Dashboard1";
+        });
+        setDash1(dash_1);
+        const dash_2: any = widget.filter((item) => {
+          return item.dashboardName === "Dashboard2";
+        });
+        setDash2(dash_2);
+      }
+      // console.log("dash_1 ", dash_1);
+      // console.log("dash_2 ", dash_2);
+      // console.log("jsondata ", jsondata);
     }
-  }, [widget]);
+  }, [widget, search]);
 
   console.log("dash1 ", dash1);
   console.log("dash2 ", dash2);
