@@ -1,6 +1,18 @@
 .dashboard {
   height: 250px;
-  width: 450px;
+  min-width: 450px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.widgetHeading {
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .card {
@@ -9,4 +21,10 @@
   background-color: rgba(32, 32, 32, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.deleteWidget {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

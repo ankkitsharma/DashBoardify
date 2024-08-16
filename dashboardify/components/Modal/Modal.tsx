@@ -6,6 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import { useAppDispatch } from "@/lib/hooks";
 import { addWidget } from "@/lib/features/widget/widgetSlice";
 import { widgetState } from "@/lib/features/widget/widgetSlice";
+import { uuid } from "uuidv4";
 
 const customStyles = {
   content: {
@@ -50,6 +51,7 @@ export default function Modal() {
           widgetName: formData.get("widgetName")?.toString() || "",
           dashboardName: formData.get("dashboardName")?.toString() || "",
           widgetData: jsonData,
+          id: uuid(),
         };
         dispatch(addWidget(values));
       } else {

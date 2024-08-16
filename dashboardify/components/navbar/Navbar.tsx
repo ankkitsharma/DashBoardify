@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { FaGithub } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";

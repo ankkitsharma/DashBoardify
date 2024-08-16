@@ -2,7 +2,7 @@ body {
   /* background-color: black; */
   color: white;
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   --s: 243px; /* control the size*/
   --c1: #1a1a1a;
   --c2: #101010;
