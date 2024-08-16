@@ -35,5 +35,16 @@ To get started with Dashboardify, follow these steps:
 - Browse the jsonData folder in the dashboardify root foler for getting the json data for the creation of widgets.
 
 # Video Demonstration
+https://drive.google.com/file/d/1AUUwvxwHpxNgiuIkK3LlQ78TaLYGBosJ/view?usp=sharing
 
 # Screenshots
+- Home Page:
+![Screenshot 2024-08-16 225030](https://github.com/user-attachments/assets/aa2f38a8-3508-4833-a947-0c0a52c188da)
+- Add widget modal:
+![Screenshot 2024-08-16 at 22-51-32 Create Next App](https://github.com/user-attachments/assets/014ffffd-cbf1-4393-afe3-4802f5bf0fdc)
+- Search widget:
+![image](https://github.com/user-attachments/assets/dd507599-b999-4efc-901f-0c8a2c0ab3c5)
+
+
+
+
