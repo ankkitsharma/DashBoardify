@@ -81,13 +81,11 @@ export default function Modal() {
               <input type="text" name="widgetName" id="widgetName" required />
             </div>
             <div className={styles.formDiv}>
-              <label htmlFor="dashboardName">Write dashboard's name:</label>
-              <input
-                type="text"
-                name="dashboardName"
-                id="dashboardName"
-                required
-              />
+              <label htmlFor="dashboardName">Select Dashboard:</label>
+              <select id="dashboardName" name="dashboardName" required>
+                <option value="Dashboard1">Dashboard1</option>
+                <option value="Dashboard2">Dashboard2</option>
+              </select>
             </div>
             <div className={styles.formDiv}>
               <label htmlFor="jsonData">Upload the json Data file</label>
