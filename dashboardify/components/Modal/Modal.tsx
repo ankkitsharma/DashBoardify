@@ -78,11 +78,16 @@ export default function Modal() {
             <div className={styles.formHeading}>Add Widget data</div>
             <div className={styles.formDiv}>
               <label htmlFor="widgetName">Write widget's name:</label>
-              <input type="text" name="widgetName" id="widgetName" />
+              <input type="text" name="widgetName" id="widgetName" required />
             </div>
             <div className={styles.formDiv}>
               <label htmlFor="dashboardName">Write dashboard's name:</label>
-              <input type="text" name="dashboardName" id="dashboardName" />
+              <input
+                type="text"
+                name="dashboardName"
+                id="dashboardName"
+                required
+              />
             </div>
             <div className={styles.formDiv}>
               <label htmlFor="jsonData">Upload the json Data file</label>
@@ -91,6 +96,7 @@ export default function Modal() {
                 name="jsonData"
                 id="jsonData"
                 className={styles.upload}
+                required
               />
             </div>
             <div className={styles.formDiv}>
