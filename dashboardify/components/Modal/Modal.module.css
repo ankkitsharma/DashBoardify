@@ -39,3 +39,10 @@
   top: 0;
   right: 0;
 }
+
+.jsonData {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.8rem;
+  color: yellow;
+}

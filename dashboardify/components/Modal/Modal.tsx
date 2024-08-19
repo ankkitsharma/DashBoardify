@@ -89,6 +89,13 @@ export default function Modal() {
             </div>
             <div className={styles.formDiv}>
               <label htmlFor="jsonData">Upload the json Data file</label>
+              <a
+                href="https://drive.google.com/drive/folders/1SAk7LmW7oXFT3jWCObV7L8E5RbJ6iT3A?usp=sharing"
+                target="__blank"
+                className={styles.jsonData}
+              >
+                Click here to get json files for data
+              </a>
               <input
                 type="file"
                 name="jsonData"
