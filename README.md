@@ -38,7 +38,7 @@ To get started with Dashboardify, follow these steps:
 - Install dependencies: `npm install` or `yarn install`
 - Start the development server: `npm run dev ` or `yarn dev`
 - Open your web browser and navigate to http://localhost:3000
-- Browse the jsonData folder in the dashboardify root foler for getting the json data for the creation of widgets.
+- Browse the jsonData folder in the dashboardify root folder for getting the json data for the creation of widgets.
   Or get the jsonData from this link : https://drive.google.com/drive/folders/1SAk7LmW7oXFT3jWCObV7L8E5RbJ6iT3A?usp=sharing
 
 # JsonData for the project
